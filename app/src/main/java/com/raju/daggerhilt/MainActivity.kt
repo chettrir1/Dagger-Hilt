@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             DaggerHiltTheme {
-                val viewModel = hiltViewModel<MyViewModel>()
+//                val viewModel = hiltViewModel<MyViewModel>()
             }
         }
     }

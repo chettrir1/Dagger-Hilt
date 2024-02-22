@@ -1,7 +1,9 @@
 package com.raju.daggerhilt.di
 
+import android.app.Application
+import com.raju.daggerhilt.MyApplication
 import com.raju.daggerhilt.data.remote.MyApi
-import com.raju.daggerhilt.data.repository.MyRepositoryClassImpl
+import com.raju.daggerhilt.data.repository.MyRepositoryImpl
 import com.raju.daggerhilt.domain.repository.MyRepository
 import dagger.Module
 import dagger.Provides
@@ -23,9 +25,9 @@ object AppModule {
             .create(MyApi::class.java)
     }
 
-    @Provides
-    @Singleton
-    fun provideMyRepository(api: MyApi): MyRepository {
-        return MyRepositoryClassImpl(api)
-    }
+//    @Provides
+//    @Singleton
+//    fun provideMyRepository(api: MyApi, application: Application): MyRepository {
+//        return MyRepositoryImpl(api, application)
+//    }
 }
